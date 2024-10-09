@@ -1,7 +1,7 @@
-import { mainnet, arbitrum, base, linea, polygon, optimism, scroll } from 'viem/chains'
+import { mainnet, arbitrum, base, linea, polygon, optimism, scroll, rootstock, rootstockTestnet } from 'viem/chains'
 import { Chain, hardhat, sepolia } from 'viem/chains'
 
-let chains = [mainnet, arbitrum, base, linea, polygon, optimism, scroll] as [Chain, ...Chain[]]
+let chains = [mainnet, arbitrum, base, linea, polygon, optimism, scroll, rootstockTestnet] as [Chain, ...Chain[]]
 
 if (process.env.NODE_ENV !== 'production') chains.push(sepolia, hardhat)
 
@@ -33,6 +33,10 @@ export const NETWORK_COLORS = {
     bgVariant: 'bg-red-600',
   },
   scroll: {
+    color: 'amber',
+    bgVariant: 'bg-amber-600',
+  },
+  rootstockTestnet: {
     color: 'amber',
     bgVariant: 'bg-amber-600',
   },
